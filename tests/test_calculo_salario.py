@@ -3,7 +3,8 @@ from domain.calculo_salario import calculate_salary
 
 class MyTestCase(unittest.TestCase):
     def test_calculate_inss(self):
-        inss = calculate_salary.calculate_inss(1600)
+        calculo_salario = calculate_salary(1600)
+        inss = calculo_salario.calculate_inss()
         self.assertEqual(inss, 128)  # add assertion here
 
 
