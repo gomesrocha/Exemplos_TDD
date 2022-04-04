@@ -1,6 +1,6 @@
 class calculateSalary:
 
-    def calculate_inss(salario_bruto):
+    def calculate_inss(self, salario_bruto):
         if salario_bruto < 1693.73:
             inss = salario_bruto * 8 / 100
         elif salario_bruto >= 1693.73 and salario_bruto < 2822.91:
@@ -11,7 +11,7 @@ class calculateSalary:
             inss = 621.03
         return inss
 
-    def calculate_irrf(salario_bruto):
+    def calculate_irrf(self, salario_bruto):
         salario = salario_bruto - calculateSalary.calculate_inss(salario_bruto)
         if salario >= 1903.99 and salario < 2826.66:
             irrf = (salario - 142.82) * 7.5 / 100
